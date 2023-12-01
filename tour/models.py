@@ -27,9 +27,15 @@ class Tours(models.Model):
 # Pending Models names = Booking, Tours_Review, Customers,  Tour_Categories
 
 
+class Customer(models.Model):
+    name = models.CharField(max_length=100)
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE, related_name='customer')
+
+
 class TourReview(models.Model):
     tour = models.ForeignKey(Tours, on_delete=models.CASCADE)
-    # customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     review = models.TextField()
     rating = models.IntegerField()
 
