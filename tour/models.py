@@ -25,3 +25,12 @@ class Tours(models.Model):
         return f'{self.title} {self.description} {self.agent}'
 
 # Pending Models names = Booking, Tours_Review, Customers,  Tour_Categories
+
+
+class TourReview(models.Model):
+    tour = models.ForeignKey(Tours, on_delete=models.CASCADE)
+    # customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    review = models.TextField()
+    rating = models.IntegerField()
+
+# need to add customer model to cascade line number 31
