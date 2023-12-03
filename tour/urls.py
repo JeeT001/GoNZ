@@ -1,12 +1,13 @@
-# from django.contrib import admin
-# from django.urls import path
-# from tour.views import tour_list, tour_detail, agents_list, agents_detail
+from django.contrib import admin
+from django.urls import path
+from . import views
+from tour.views import TourListView
 
-# urlpatterns = [
-#     path('', tour_list, name="home"),
-#     path('tours/', tour_list, name="tourList"),
-#     path('tours/<int:pk>/', tour_detail, name="tourDetails"),
-#     path('agents/', agents_list, name="agentList"),
-#     path('agents/<int:pk>/', agents_detail, name="agentDetail"),
+urlpatterns = [
+    path('tours/', TourListView, name="tour_list"),
+    # path('tours/', tour_list, name="tourList"),
+    # path('tours/<int:pk>/', tour_detail, name="tourDetails"),
+    # path('agents/', agents_list, name="agentList"),
+    # path('agents/<int:pk>/', agents_detail, name="agentDetail"),
 
-# ]
+]
