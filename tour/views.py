@@ -31,3 +31,8 @@ class AgentListView(generic.ListView):
 class CustomerListView(generic.ListView):
     model = Customer
     template_name = 'tours/customer_list.html'
+
+
+class TourCategoryView(generic.ListView):
+    model = TourCategory
+    template_name = 'tours/tour_category.html'

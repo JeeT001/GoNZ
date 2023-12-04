@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Library System</title>
+    <title>GoNZ</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     
@@ -18,6 +18,8 @@
         <li><a href="{% url 'customer_list' %}">Customers</a></li>
         <li><a href="{% url 'tour_review' %}">Reviews</a></li>
         <li><a href="{% url 'booking_tour' %}">Booking</a></li>
+        <li><a href="{% url 'tour_category' %}">Tour Categories</a></li>
+
 
 
 
@@ -29,6 +31,7 @@
 <!-- Content -->
 <div class="container mt-5">
     {% block content %}
+
     {% endblock %}
 </div>
 

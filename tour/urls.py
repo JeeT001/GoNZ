@@ -6,6 +6,7 @@ from tour.views import AgentListView
 from tour.views import CustomerListView
 from tour.views import TourReviewView
 from tour.views import BookingTourView
+from tour.views import TourCategoryView
 
 
 urlpatterns = [
@@ -17,6 +18,8 @@ urlpatterns = [
     path('agents/', AgentListView.as_view(), name="agent_list"),
     # path('agents/<int:pk>/', agents_detail, name="agentDetail"),
     path('customers/', CustomerListView.as_view(), name="customer_list"),
+    path('tours/category/', TourCategoryView.as_view(), name="tour_category"),
+
 
 
 
