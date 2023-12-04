@@ -11,3 +11,8 @@ from .models import Agents, Tours, TourReview, Customer, BookingTour, TourCatego
 class TourListView(generic.ListView):
     model = Tours
     template_name = 'tours/tour_list.html'
+
+
+class AgentListView(generic.ListView):
+    model = Agents
+    template_name = 'tours/agent_list.html'
