@@ -39,7 +39,7 @@ class Customer(models.Model):
 class BookingTour(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     tour = models.ForeignKey(Tours, on_delete=models.CASCADE)
-    due_date = models.DateField()
+    booking_date = models.DateField()
 
 
 class TourReview(models.Model):

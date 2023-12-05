@@ -1,1 +1,44 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GoNZ</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    
+</head>
+<body>
+
+<!-- Header with GoNZ Page Names -->
+<nav>
+<div class="navbar">
+    <ul>
+        <li><a class="active" href="{% url 'tour_list' %}">Tours</a></li>
+        <li><a href="{% url 'agent_list' %}">Agents</a></li>
+        <li><a href="{% url 'customer_list' %}">Customers</a></li>
+        <li><a href="{% url 'tour_review' %}">Reviews</a></li>
+        <li><a href="{% url 'booking_tour' %}">Booking</a></li>
+        <li><a href="{% url 'tour_category' %}">Tour Categories</a></li>
+
+
+
+
+      </ul>
+</div>
+</nav>
+
+
+<!-- Content -->
+<div class="container mt-5">
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+<!-- Footer -->
+<footer class="text-center p-3 mt-5">
+    <p>Copyright © 2023 GoNZ. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
