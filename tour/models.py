@@ -22,7 +22,7 @@ class Tours(models.Model):
         Agents, on_delete=models.PROTECT, related_name='agents')
 
     def __str__(self):
-        return f'{self.title} {self.description} {self.agent}'
+        return self.title
 
 # Pending Models names = Booking, Tours_Review, Customers,  Tour_Categories
 
