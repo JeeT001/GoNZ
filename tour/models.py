@@ -41,6 +41,9 @@ class BookingTour(models.Model):
     tour = models.ForeignKey(Tours, on_delete=models.CASCADE)
     booking_date = models.DateField()
 
+    def __str__(self):
+        return f"Booking of '{self.tour.title} by {self.customer.name} on {self.booking_date}'"
+
 
 class TourReview(models.Model):
     tour = models.ForeignKey(Tours, on_delete=models.CASCADE)
