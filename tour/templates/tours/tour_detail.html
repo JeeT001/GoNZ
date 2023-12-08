@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+GoNZ Our Tours
+{% endblock %}
+{% block content %}
+    <h1>Amazing Tours</h1>
+    {% load static %}
+<!-- "This is comment at the moment"
+<div class= "banner"><img src='{% static "imagenes/cropped-travel-1.jpg" %}'/></div> -->
+    <ul>
+        {% for tour in tours %}
+    <li>
+    <div class="title"></div>
+        <h3>{{tour.title}}</h3>
+    <div class="description"></div>
+        <p>{{ tour.description}}</p>
+ <!--       <a href="{% url 'our agents' %}">Book now with our agents</a>  -->
+    </li>
+    {% endfor%}      
+        
+    </ul>
+    {% endblock%}
+</body>
+</html>

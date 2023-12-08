@@ -1,1 +1,10 @@
 {% extends "base.html" %}
+{% block title %}
+GoNZ Our Tours - {{tour.title}}
+{% endblock %}
+{% block content %}
+    <h1>{{tour.title}}</h1>
+     
+    <p>{{ tour.description}}</p>
+<!---   <a href="{% url 'tour_list' %}">Go back to our Tours</a> --> 
+  {% endblock %}
