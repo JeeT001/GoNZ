@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+GoNZ-TourList
+{% endblock %}
+
+{% block content %}
+<h1>Booking Details</h1>
+    <p><strong>Customer:</strong> {{ booking.customer.name }}</p>
+    <p><strong>Tour:</strong> {{ booking.tour.title }}</p>
+    <p><strong>Booking Date:</strong> {{ booking.booking_date }}</p>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+GoNZ-TourList
+{% endblock %}
+
+{% block content %}
+<h1>Agent List</h1>
+    <ul>
+        {% for agent in agentss %}
+            <li><a href="{% url 'agent_detail' pk=agent.pk %}">{{ agent.firstName }} {{ agent.lastName }}</a></li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
