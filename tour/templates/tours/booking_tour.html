@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+GoNZ-TourList
+{% endblock %}
+
+{% block content %}
+<h1>Booking List</h1>
+    <ul>
+        {% for booking in bookings %}
+        <li><a href="{% url 'booking_detail' pk=booking.pk %}">{{ booking }}</a></li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
