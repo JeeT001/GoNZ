@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+GoNZ-TourList
+{% endblock %}
+
+{% block content %}
+<h1>Tour Reviews</h1>
+    <ul>
+        {% for review in reviews %}
+            <li><a href="{% url 'tour_review_detail' pk=review.pk %}">{{ review }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

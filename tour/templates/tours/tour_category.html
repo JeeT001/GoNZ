@@ -1,11 +1,14 @@
-{% extends "base.html" %}
-
+{% extends 'base.html' %}
 {% block title %}
-Tour Categories- {{tour.title}}
+GoNZ-TourList
 {% endblock %}
+
 {% block content %}
-    <h1>{{tour_category.title}}</h1>
-     
-    <p>{{ tour_category.description}}</p>
-<!---   <a href="{% url 'tour_list' %}">Go back to our Tours</a> --> 
-  {% endblock %}
+<h1>Tour Categories</h1>
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'tour_category_detail' pk=category.pk %}">{{ category }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

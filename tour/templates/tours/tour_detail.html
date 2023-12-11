@@ -1,24 +1,21 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block title %}
-GoNZ Our Tours
+GoNZ-TourList
 {% endblock %}
+
 {% block content %}
-    <h1>Amazing Tours</h1>
-    {% load static %}
-<!-- "This is comment at the moment"
-<div class= "banner"><img src='{% static "imagenes/cropped-travel-1.jpg" %}'/></div> -->
-    <ul>
-        {% for tour in tours %}
-    <li>
-    <div class="title"></div>
-        <h3>{{tour.title}}</h3>
-    <div class="description"></div>
-        <p>{{ tour.description}}</p>
- <!--       <a href="{% url 'our agents' %}">Book now with our agents</a>  -->
-    </li>
-    {% endfor%}      
+<h1>Tour Details </h1>
+<ul>
+    {% comment %} {% for agent in agent  %} {% endcomment %}
+    <body>
         
-    </ul>
-    {% endblock%}
-</body>
-</html>
+        <p><strong>Title:</strong> {{ tours.title }}</p>
+        <p><strong>Description:</strong> {{ tours.description }}</p>
+        <p><strong>Agent:</strong> {{ tours.agent.firstName }} {{ tours.agent.lastName }}</p>
+    </body>
+
+    
+    {% comment %} {% endfor %} {% endcomment %}
+</ul>
+
+{% endblock %}

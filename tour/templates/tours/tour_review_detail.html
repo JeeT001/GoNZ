@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+GoNZ-TourList
+{% endblock %}
+
+{% block content %}
+<h1>Tour Review Details</h1>
+    <p><strong>Tour:</strong> {{ review.tour.title }}</p>
+    <p><strong>Customer:</strong> {{ review.customer.name }}</p>
+    <p><strong>Rating:</strong> {{ review.rating }} stars</p>
+    <p><strong>Review:</strong> {{ review.review }}</p>
+
+{% endblock %}
