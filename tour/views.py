@@ -10,14 +10,22 @@ from django.views.generic import ListView
 from .models import Agents, Tours, TourReview, Customer, BookingTour, TourCategory
 
 
-class TourListView(generic.ListView):
+class TourListView(ListView):
     model = Tours
     template_name = 'tours/tour_list.html'
+    context_object_name = 'tours'
 
 
-class TourReviewView(generic.ListView):
+class TourReviewListView(ListView):
     model = TourReview
     template_name = 'tours/tour_review.html'
+    context_object_name = 'reviews'
+
+
+class TourReviewDetailView(DetailView):
+    model = TourReview
+    template_name = 'tours/tour_review_detail.html'
+    context_object_name = 'review'
 
 
 class BookingTourListView(ListView):
@@ -58,3 +66,16 @@ class CustomerListView(generic.ListView):
 class TourCategoryView(generic.ListView):
     model = TourCategory
     template_name = 'tours/tour_category.html'
+    context_object_name = 'categories'
+
+
+class TourCategoryDetailView(DetailView):
+    model = TourCategory
+    template_name = 'tours/tours_category_detail.html'
+    context_object_name = 'category'
+
+
+class TourDetailView(DetailView):
+    model = Tours
+    template_name = 'tours/tour_detail.html'
+    context_object_name = 'tours'

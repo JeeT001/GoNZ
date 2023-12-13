@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+GoNZ-TourList
+{% endblock %}
+
+{% block content %}
+<h1>Tour Category Details </h1>
+<ul>
+    {% comment %} {% for agent in agent  %} {% endcomment %}
+
+    <p><strong>Name:</strong> {{ category.name }}</p>
+    <p><strong>Tours:</strong></p>
+    <ul>
+        {% for tour in category.tours.all %}
+            <li>{{ tour.title }}</li>
+        {% endfor %}
+    </ul>
+
+    
+    {% comment %} {% endfor %} {% endcomment %}
+</ul>
+
+{% endblock %}

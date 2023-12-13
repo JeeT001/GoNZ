@@ -7,29 +7,26 @@
         {% endblock %}
     </title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    
     
 </head>
 <body>
-
-<!-- Header with GoNZ Page Names -->
+    
 <nav>
 <div class="navbar">
     <ul>
         <li><a class="active" href="{% url 'tour_list' %}">Tours</a></li>
-        {% comment %} <li><a href="{% url 'agent_list' %}">Agents</a></li> {% endcomment %}
-        <li><a href="{% url 'customer_list' %}">Customers</a></li>
-        <li><a href="{% url 'tour_review' %}">Reviews</a></li>
-        <li><a href="{% url 'booking_tour' %}">Booking</a></li>
-        <li><a href="{% url 'tour_category' %}">Tour Categories</a></li>
+        <li><a class="active" href="{% url 'tour_category' %}">Tour Categories</a></li>
 
-
-
-
-      </ul>
+        <li><a href="{% url 'agent_list' %}">Agents</a></li>
+        <li><a href="{% url 'tourreview_list' %}">Reviews</a></li>
+        <li><a href="{% url 'booking_tour' %}">Bookings</a></li>
+    </ul>
 </div>
 </nav>
 
+<img class="mainPic" src="{% static 'img/aukland.jpg' %}" width="100%" height="200">
 
 <!-- Content -->
 <div class="container mt-5">
